@@ -33,6 +33,7 @@ main {
 .shows-container {
   display: flex;
   justify-content: center;
+  padding-bottom: 100px;
 }
 
 .display-show {
@@ -47,23 +48,26 @@ main {
 }
 
 .comment-btn {
-  width: 100%;
+  width: 250px;
+  margin-top: 20px;
 }
 
 .button_p {
   text-align: right;
+  margin: 0;
 }
 
 .close-button {
   border: none;
   background: none;
   font-size: 35px;
-  color: indianred;
+  color: rgb(49, 46, 206);
 }
 
 .pop-up {
   display: flex;
   justify-content: center;
+  padding: 50px;
 }
 
 .pop-up-img {
@@ -84,6 +88,7 @@ main {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 5%;
+  padding-bottom: 30px;
 }
 
 .like-comment-btns span {
@@ -99,12 +104,6 @@ main {
 
 .like-heart {
   text-decoration: none;
-}
-
-footer {
-  border: solid #000 1px;
-  padding-left: 2%;
-  font-weight: bold;
 }
 
 .hide {
@@ -145,6 +144,8 @@ form input {
     object-fit: cover;
     width: 100%;
     height: 580px;
+    border-radius: 8px;
+    padding-bottom: 20px;
   }
 }
 
@@ -153,5 +154,7 @@ form input {
     object-fit: fill;
     width: 100%;
     height: 580px;
+    border-radius: 10px;
+    padding-bottom: 20px;
   }
 }

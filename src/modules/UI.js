@@ -4,6 +4,7 @@ import tvm from './tvm_api.png';
 const logo = document.querySelector('.logo');
 const displayListOfShows = document.querySelector('.display-list-of-shows');
 const showCounter = document.querySelector('.show-counter');
+const mainPageText = document.querySelector('.main-page-text');
 
 const popUp = document.querySelector('.pop-up');
 const commentPopUp = document.querySelector('.comment');
@@ -76,12 +77,13 @@ const openPopUpWindow = () => {
       showsContainer.classList.add('hide');
       popUp.classList.remove('hide');
       commentPopUp.classList.remove('hide');
+      mainPageText.classList.add('hide');
       const selectedShow = showData.filter(
         (data) => data.id === Number(targetId),
       )[0];
 
       popUp.innerHTML = `<div class="display-popup-show">
-<p class='button_p'><button type="button" data-close-button class="close-button">&times;</button></p>
+        <button type="button" data-close-button class="close-button">&times;</button>
          <div class="pop-up-img">  
          <img src="${selectedShow.image.original}" alt="">
            <h3>${selectedShow.name}</h3>
@@ -137,13 +139,13 @@ const closePopUp = () => {
     showsContainer.classList.remove('hide');
     popUp.classList.add('hide');
     commentPopUp.classList.add('hide');
+    mainPageText.classList.remove('hide');
   });
 };
 
 const showCount = async () => {
   const numberOfShows = await fetchData.fetchTVAPI();
-  showCounter.innerHTML = `Shows(${numberOfShows.length})`;
-  return numberOfShows.length;
+  showCounter.innerHTML = `Best TV series of all times (${numberOfShows.length})`;
 };
 
 export const displayShows = async () => {
