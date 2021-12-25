@@ -124,7 +124,7 @@ const openPopUpWindow = () => {
           <form action="#">
           <input id="${targetId}" class="name_input" type="text" placeholder="Your name" name="username" required>
           <input id="${targetId}" class="insight_input" type="text" placeholder="Your insights" name="insights" required>
-          <p class="button_p"><button class="submit_button btn btn-secondary comment-btn"  id="${targetId}" type="submit">Comment</button></p>
+          <p class="button_p"><button class="submit_button btn btn-secondary comment-submit-btn"  id="${targetId}" type="submit">Comment</button></p>
         </form>
         </div>`;
       comments();
@@ -159,16 +159,17 @@ export const displayShows = async () => {
     .map(
       (result) => `<div class="display-show">
     <img src="${result.image.original}" alt="">
-    <p class="show-title">${result.name}
-    <span>
-    <a id=${result.id} class="like-heart" href="#">&#9825;</a>
-    <span><p class="show-likes">${
-      involveData.filter(
-        (like) => parseInt(like.item_id, 10) === parseInt(result.id, 10)
-      )[0].likes
-    }</p> likes </span>
-    </span>
-    </p>
+    <div class="title-like">
+      <p class="show-title">${result.name}</p>
+      <div class="heart-like">
+        <a id=${result.id} class="like-heart" href="#">&#9825;</a>
+        <p class="show-likes">${
+          involveData.filter(
+            (like) => parseInt(like.item_id, 10) === parseInt(result.id, 10)
+          )[0].likes
+        }</p> likes
+      </div>
+    </div>
     <button id=${
       result.id
     } class="btn btn-secondary comment-btn">Comments</button>

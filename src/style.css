@@ -42,14 +42,28 @@ main {
   padding: 8px;
 }
 
+.title-like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.show-likes {
+  margin: 0;
+}
+
 .display-show img {
   width: 400px;
   height: 500px;
 }
 
-.comment-btn {
+.comment-submit-btn {
   width: 250px;
   margin-top: 20px;
+}
+
+.comment-btn {
+  width: 100%;
 }
 
 .button_p {
@@ -100,6 +114,12 @@ main {
   justify-content: space-between;
   padding-top: 15px;
   font-size: 22px;
+}
+
+.heart-like {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
 }
 
 .like-heart {
